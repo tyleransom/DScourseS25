@@ -76,19 +76,19 @@ Please follow these steps closely to allow SSH authentication on OSCER:
     \end{itemize}
     \item type \texttt{ssh-keygen -t rsa -b 4096 -C "your.email@address.com"} where you fill in with the email address you use for GitHub
     \begin{itemize}
-        \item when it asks you for the file in which to save the key, label it ``ghDS24''
+        \item when it asks you for the file in which to save the key, label it ``ghDS25''
         \item you may enter a passphrase to protect the ssh key but it is not required; you can simply hit enter twice
     \end{itemize}
-    \item it should tell you ``Your identification has been saved in ghDS24'' and ``Your public key has been saved in ghDS24.pub'' and then print out some other stuff about a fingerprint and randomart image.
+    \item it should tell you ``Your identification has been saved in ghDS25'' and ``Your public key has been saved in ghDS25.pub'' and then print out some other stuff about a fingerprint and randomart image.
     \item type \texttt{cd \~}
     \item type \texttt{eval "\$(ssh-agent -s)"}
-    \item type \texttt{ssh-add \~/.ssh/ghDS24}
+    \item type \texttt{ssh-add \~/.ssh/ghDS25}
     \item in a web browser, visit \url{https://github.com/settings/keys} and click "new SSH key". Name it "OSCER"
-    \item Copy the contents of your \texttt{ghDS24.pub} file and paste it into the key box. You can do this in a couple of ways:
+    \item Copy the contents of your \texttt{ghDS25.pub} file and paste it into the key box. You can do this in a couple of ways:
     \begin{itemize}
-        \item type \texttt{cat \~/.ssh/ghDS24.pub} and then select all of the text with your mouse cursor. In some terminals, this also copies the text. Otherwise you can try and right-click and then copy it. Then paste it into the box on the GitHub SSH key webpage.
+        \item type \texttt{cat \~/.ssh/ghDS25.pub} and then select all of the text with your mouse cursor. In some terminals, this also copies the text. Otherwise you can try and right-click and then copy it. Then paste it into the box on the GitHub SSH key webpage.
         \item email the key to yourself by typing
-        \texttt{mail -s "public key" email@address.com < ~/.ssh/ghDS24.pub}
+        \texttt{mail -s "public key" email@address.com < ~/.ssh/ghDS25.pub}
         Then copy/paste it into the box on the GitHub SSH key webpage
     \end{itemize}
 \end{enumerate}
@@ -126,7 +126,7 @@ Once you have done this, issue a \texttt{git pull} from the location of your oth
     \item At the bottom of the file, type the following:
         \begin{itemize}
         \item type \texttt{eval "\$(ssh-agent -s)"}
-        \item type \texttt{ssh-add \~/.ssh/ghDS24}
+        \item type \texttt{ssh-add \~/.ssh/ghDS25}
         \end{itemize}
     \item Then push Control+X and then type ``yes'' (or ``y'') when it asks if you want to modify the file.
 \end{enumerate}
