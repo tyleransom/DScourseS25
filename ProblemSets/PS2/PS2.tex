@@ -88,9 +88,10 @@ Please follow these steps closely to allow SSH authentication on OSCER:
     \begin{itemize}
         \item type \texttt{cat \~/.ssh/ghDS25.pub} and then select all of the text with your mouse cursor. In some terminals, this also copies the text. Otherwise you can try and right-click and then copy it. Then paste it into the box on the GitHub SSH key webpage.
         \item email the key to yourself by typing
-        \texttt{mail -s "public key" email@address.com < ~/.ssh/ghDS25.pub}
+        \texttt{mail -s "public key" email@address.com < \~/.ssh/ghDS25.pub}
         Then copy/paste it into the box on the GitHub SSH key webpage
     \end{itemize}
+    \item Before proceeding to the next question, you may need to skip below to question \#9 (part 3) of this problem set and add the ssh key initialization to your bash profile file.
 \end{enumerate}
     If all of that was too much for you, you can also check out this YouTube video for a walkthrough: \url{https://www.youtube.com/watch?v=s6KTbytdNgs}
 \question If you have already cloned your forked GitHub repository to your home directory on OSCER, you will need to adjust the URL for the remote by following these steps:
@@ -108,7 +109,7 @@ Please follow these steps closely to allow SSH authentication on OSCER:
     \item Check that everything works by typing \texttt{ls} and hitting enter. You should see a directory called ``DScourseS25'' and if you change to that directory, you should see an identical directory and file structure to what is on your GitHub private fork of the course repo.
 \end{enumerate}
 \question Go to \url{www.overleaf.com} and create another .tex document, this time naming it \texttt{PS2\_LastName.tex}. In it, write down a list (in a LaTeX \texttt{itemize} envrionment) that outlines the main tools of a data scientist (as discussed in class). Compile the PDF.
-\question Compile your .tex file, download the PDF and .tex file, and transfer it to your cloned repository on OSCER. There are many ways to do this;  you may ask an AI chatbot or simply drag-and-drop using VS Code. Do \textbf{not} put these files in your fork on your personal laptop; otherwise git will detect a merge conflict and that will be a painful process to resolve.
+\question Compile your .tex file, download the PDF and .tex file, and transfer it to your cloned repository on OSCER. There are many ways to do this;  you may ask an AI chatbot (which will probably give you some terminal commands you can use at the RStudio terminal or similar) or simply drag-and-drop using an SFTP client like FileZilla, WinSCP or Cyberduck. Do \textbf{not} put these files in your fork on your personal laptop; otherwise git will detect a merge conflict and that will be a painful process to resolve.
 \question Make sure that your .tex and .pdf files have the correct naming convention (see top of this problem set for directions) and are located in the correct directory. If the directory does not exist, create it using the \texttt{mkdir} command.
 \question Update your OSCER git repository (in your OSCER home directory) by using the following commands:
 \begin{itemize}
