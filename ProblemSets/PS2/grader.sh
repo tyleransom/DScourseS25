@@ -1,5 +1,5 @@
 #!/bin/sh
-for i in $(seq 1 17); do
+for i in $(seq 1 11); do
     echo "user $i"
     points=0
     j=$(printf "%03d" $i)
@@ -15,22 +15,24 @@ for i in $(seq 1 17); do
     fi
     
     # 3-4 -- cloned repository
-    if [ -d "DScourseS24" ]; then
+    if [ -d "DScourseS25" ]; then
         points=$((points + 5))
     else
-        echo "Directory named 'DScourseS24' does not exist"
+        echo "Directory named 'DScourseS25' does not exist"
     fi
     
     # 5 -- .tex file in PS2 folder
-    if ls /home/ouecon${j}/DScourseS24/ProblemSets/PS2/*_*.tex 1> /dev/null 2>&1; then
+    if ls /home/ouecon${j}/DScourseS25/ProblemSets/PS2/*_*.tex 1> /dev/null 2>&1; then
         points=$((points + 5))
     else
         echo "tex file does not exist"
     fi
         
     # 6 -- .pdf file in PS2 folder
-    if ls /home/ouecon${j}/DScourseS24/ProblemSets/PS2/*_*.pdf 1> /dev/null 2>&1; then
+    if ls /home/ouecon${j}/DScourseS25/ProblemSets/PS2/*_*.pdf 1> /dev/null 2>&1; then
         points=$((points + 5))
+        echo "pdf contents:"
+        pdftotext /home/ouecon${j}/DScourseS25/ProblemSets/PS2/*_*.pdf -
     else
         echo "pdf file does not exist"
     fi

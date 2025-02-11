@@ -1,6 +1,6 @@
 ---
 title: "Lecture 27"
-subtitle: "How to use LLMs to turbo-charge your research productivity"
+subtitle: "How to use AI to turbo-charge your research productivity"
 author: Tyler Ransom
 date: ECON 5253, University of Oklahoma
 output:
@@ -33,14 +33,22 @@ BibOptions(check.entries = FALSE,
 
 # Today's plan
 
-1. Describe Large Language Models (LLMs, e.g. GPT-4)
+1. What are LLMs, Reasoning Models, and Agents?
 
-2. Practical tips for getting the most out of LLMs
+2. What tools are available?
 
-3. Walk through the workflow for producing a research paper
+3. Why should academics care?
 
-4. Go through an example step by step
+4. How can we better use these tools?
 
+5. Application
+
+
+
+---
+class: center, middle
+
+# What are LLMs, Reasoning Models, and Agents?
 
 
 
@@ -83,42 +91,71 @@ BibOptions(check.entries = FALSE,
 
 
 ---
-# What is the current state of the art?
+# Reasoning Models and Agents
 
-As of late April 2024, there are 4 major players:
+- LLMs by themselves aren't solving a dynamic optimization problem
 
-- OpenAI's [GPT-4](https://chat.openai.com/)
+    - This severely limits what they can do
 
-- Google's [Gemini](https://gemini.google.com/app)
+- However, recent advances have made "reasoning" possible
 
-- Meta's [Llama](https://llama.meta.com/)
+    - The LLM iterates on itself to make sure its final output makes sense
 
-- Anthropic's [Claude](https://claude.ai/chats)
+    - This reduces the prevalence of "hallucinations"
 
-Each product may have differing derivative features
+- "Agents" also arise from giving LLMs a "goal" to achieve
 
-- Gemini can search YouTube; Bing Chat can use GPT-4
+    - Similar to reinforcement learning
+    
+    - Hope is that agents can autonomously solve problems without human intervention
 
-- Each product has a "freemium" business model; $20/month unlocks full features
 
 
 
 ---
-# Which chatbot should I use?
+class: center, middle
 
-- Each product on the previous slide has strengths and weaknesses
+# What tools are available?
 
-    - You must experiment to find the best fit for your needs
 
-- Each product delivers more or less the same baseline performance
+---
+# Chat-based tools
 
-- I use Gemini if I want a YouTube video summary
+As of mid-February 2025, there are 4 major players for chat-based LLMs:
 
-- GPT-4 allows for custom "GPTs" that can automate interactions
+- OpenAI's [GPT-4o](https://chat.openai.com/)
 
-- Claude 3 Opus has large context windows and is my current favorite
+- Google's [Gemini Advanced](https://gemini.google/advanced/?hl=en)
 
-- I expect OpenAI to release a major update within 6 months, at which point I will probably drop Anthropic and switch to OpenAI
+- Meta's [Llama 3.x](https://www.llama.com/)
+
+- Anthropic's [Claude 3.5 Sonnet](https://claude.ai/chats)
+
+Each product may have differing derivative features
+
+- Gemini can search YouTube; Bing Chat can use GPT-4o
+
+- Each product has a "freemium" business model; $20/month unlocks full features
+
+
+---
+# Reasoning models and agents
+
+As of mid-February 2025, there are 2 major players for reasoning models:
+
+- OpenAI
+
+    - o1: first model with basic reasoning capabilities
+    
+    - o3: not-yet-released model with advanced reasoning capabilities
+    
+    - Deep Research: conducts online research and local file analysis
+
+- DeepSeek
+
+    - R1: extremely cheap, open-source model with performance comparable to o1
+
+- OpenAI currently charges $200/month for ChatGPT Pro, which includes unlimited access to o1 plus a certain number of Deep Research queries
 
 
 
@@ -137,7 +174,81 @@ Each product may have differing derivative features
 
 - [Microsoft Copilot](https://copilot.microsoft.com/) for Word, PowerPoint, etc.
 
-- [Perplexity](https://perplexity.ai/) and [Bing Chat](https://bing.com/chat) for AI-augmented internet search
+- [Perplexity](https://perplexity.ai/) and [Bing Chat](https://bing.com/chat) for AI-augmented internet search; Perplexity interfaces w/Deepseek-R1
+
+
+---
+# Which product(s) should I use?
+
+- Each product on the previous slides has strengths and weaknesses
+
+    - You must experiment to find the best fit for your needs
+
+- Each chatbot delivers more or less the same baseline performance
+
+- I use Gemini if I want a YouTube video summary
+
+- GPT-4 allows for custom "GPTs" that can automate interactions
+
+- Claude 3.5 Sonnet has large context windows and is my current favorite
+
+- I am currently unclear on how best to use the agent/reasoning models
+
+- There will be plenty more updates on agents in 2025-26, I expect
+
+
+---
+class: center, middle
+
+# Why should academics care?
+
+
+---
+# How AI Could Transform Academic Research
+
+- [Joshua Gans](https://www.rotman.utoronto.ca/the-rotman-experience/our-community/people/gans-joshua/) had o1 write a paper that got [published](https://www.sciencedirect.com/science/article/pii/S0165176525000461?via%3Dihub) at *Economics Letters*
+
+- Shows that AI can dramatically compress research timelines
+
+- Gans argues in a [blog post](https://joshuagans.substack.com/p/what-will-ai-do-to-presearch):
+
+    - The current "presearch" model may become obsolete 
+
+    - Research could become cheaper than search
+
+    - Why look up papers when AI can generate research on demand?
+
+    - The academic system will need to adapt
+
+    - Direction of scientific progress likely to shift markedly
+
+
+---
+# My own experience
+
+- In October 2024, I released a health economics paper (see [here](https://www.iza.org/publications/dp/17390/are-vegetable-seed-oils-fueling-the-obesity-epidemic))
+
+- This was far afield from my normal research expertise
+
+- The idea came from reading 10-12 popular science books on the topic
+
+- Producing this paper by myself would not have been possible pre-2024
+
+    - I used Elicit for literature review
+    
+    - GPT-4 and Claude 3.5 Sonnet for coding
+    
+    - Claude 3.5 Sonnet for technical explanations outside my expertise
+
+    - Claude 3.5 Sonnet for outlining paper structure and writing refinement
+
+
+---
+class: center, middle
+
+# How can we better use these tools?
+
+(These examples are from April 2024; current performance is likely even better)
 
 
 ---
@@ -147,25 +258,7 @@ Each product may have differing derivative features
 
 > can you give me code to run a regression of `mpg` on `weight`, `cylinders`, and `carburetor` using the `mtcars` sample dataset in R? please use tidyverse packages where possible
 
-- .hi[Metaprompting] can be the easiest rule of thumb, e.g.
-
-   - "give me a prompt for an LLM to get it to do the following task:"
-   
-     followed by
-   
-   - "what extra information do I need to include to best aid completion of the task?"
-
-
----
-# Practical tips for using LLMs: variables in prompts
-
-- It's also possible to put variables in your prompt, like so:
-
-> Write a personalized thank you letter for [customer] for buying [product]. The thank you letter is intended to be given with the product. Write the letter around how the product can help [customer] in a polite, glad, extremely authentic tone, and the reader should feel comfortable and connected to reach out to the company for feedback.
-
-> Product = "a graphic design software called Hue with integrated AI tools
-
-> Customer = "name: Steve, a graphic designer"
+- Modern chatbots have large context windows, so feel free to upload a PDF with software documentation, code, an academic paper, etc.
 
 
 ---
