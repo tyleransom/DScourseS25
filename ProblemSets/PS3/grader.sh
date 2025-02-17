@@ -1,5 +1,5 @@
 #!/bin/sh
-for i in $(seq 1 17); do
+for i in $(seq 1 11); do
     echo ""
     echo ""
     echo "---------------------------------------------------"
@@ -11,9 +11,9 @@ for i in $(seq 1 17); do
     cd /home/ouecon${j}
     
     # 4 -- shell script file in PS3 folder
-    if ls /home/ouecon${j}/DScourseS24/ProblemSets/PS3/PS3*.sh 1> /dev/null 2>&1; then
+    if ls /home/ouecon${j}/DScourseS25/ProblemSets/PS3/PS3*.sh 1> /dev/null 2>&1; then
         points=$((points + 20))
-        head -7 /home/ouecon${j}/DScourseS24/ProblemSets/PS3/PS3*.sh | tail -3
+        head -7 /home/ouecon${j}/DScourseS25/ProblemSets/PS3/PS3*.sh | tail -3
         echo ""
         echo ""
     else
@@ -21,9 +21,9 @@ for i in $(seq 1 17); do
     fi
     
     # 5 -- shell script file in PS3 folder
-    if ls /home/ouecon${j}/DScourseS24/ProblemSets/PS3/*_*.sql 1> /dev/null 2>&1; then
+    if ls /home/ouecon${j}/DScourseS25/ProblemSets/PS3/*_*.sql 1> /dev/null 2>&1; then
         points=$((points + 20))
-        head -15 /home/ouecon${j}/DScourseS24/ProblemSets/PS3/*_*.sql | tail -4
+        head -15 /home/ouecon${j}/DScourseS25/ProblemSets/PS3/*_*.sql | tail -4
         echo ""
         echo ""
     else
@@ -31,9 +31,9 @@ for i in $(seq 1 17); do
     fi
     
     # 6 -- .tex file in PS3 folder
-    if ls /home/ouecon${j}/DScourseS24/ProblemSets/PS3/*_*.tex 1> /dev/null 2>&1; then
+    if ls /home/ouecon${j}/DScourseS25/ProblemSets/PS3/*_*.tex 1> /dev/null 2>&1; then
         points=$((points + 5))
-        tail /home/ouecon${j}/DScourseS24/ProblemSets/PS3/*_*.tex
+        tail -20 /home/ouecon${j}/DScourseS25/ProblemSets/PS3/*_*.tex
         echo ""
         echo ""
     else
@@ -41,8 +41,10 @@ for i in $(seq 1 17); do
     fi
         
     # 7 -- .pdf file in PS3 folder
-    if ls /home/ouecon${j}/DScourseS24/ProblemSets/PS3/*_*.pdf 1> /dev/null 2>&1; then
+    if ls /home/ouecon${j}/DScourseS25/ProblemSets/PS3/*_*.pdf 1> /dev/null 2>&1; then
         points=$((points + 5))
+        echo "pdf contents:"
+        pdftotext /home/ouecon${j}/DScourseS25/ProblemSets/PS3/*_*.pdf -
     else
         echo "pdf file does not exist"
     fi
