@@ -40,8 +40,8 @@
 \usepackage{enumerate}% For cusomtizable lists
 \usepackage{pstricks,pst-node,pst-tree,pst-plot} % For trees
 % Bib
-\usepackage[authoryear]{natbib} % Bibliography
-\usepackage{url}                % Allows urls in bib
+%\usepackage[authoryear]{natbib} % Bibliography
+%\usepackage{url}                % Allows urls in bib
 % TOC
 \setcounter{tocdepth}{4}
 % Links
@@ -123,6 +123,7 @@ Once you've logged back in to OSCER, verify that your modification worked by typ
 What I wanted you to take away from this exercise is that there is no one-to-one mapping from JSON/YAML files to tabular data. So creating a tabular data frame from a JSON requires a little extra work. The same holds true for other data types like XML and HTML (though these may be closer to a one-to-one tabular representation).
 Also, note that the \texttt{fromJSON} and other functions can accept a URL as an argument. I had you use the shell just so you can get comfortable with accessing the shell from within R/Julia/Python.
 \subsubsection*{Practice with sparklyr (R exercise part 2)}
+\textbf{NOTE: THE INSTRUCTIONS IN THIS EXERCISE MAY NOT WORK FOR YOU. I ENCOURAGE YOU TO GIVE THEM A TRY, BUT IF THEY DON'T WORK ON THE FIRST TRY, YOU WILL NOT BE PENALIZED. I DON'T WANT YOU TO WASTE VERY MUCH TIME TRYING TO GET IT TO WORK IF IT DOESN'T WORK IMMEDIATELY.}
 \question This exercise will familiarize yourself with \texttt{sparklyr} which is how one can use Spark through R. The walkthrough that I am giving you can also be found at \url{https://spark.rstudio.com/}. Please create an R script called \texttt{PS4b\_LastName.R} which contains all of your \texttt{sparklyr} commands (so that you could easily reproduce your work whenever called upon).
 \begin{enumerate}
     \item Open an R session on OSCER by typing \texttt{R} at the command prompt.
