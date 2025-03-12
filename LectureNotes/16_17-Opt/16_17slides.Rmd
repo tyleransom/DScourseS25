@@ -72,13 +72,51 @@ BibOptions(check.entries = FALSE,
 ---
 # Graph of the optimization problem
 
-.center[
-<img width="450" src="http://earlelab.rit.albany.edu/gallery/LogLVOacac.jpg" alt="Likelihood function">
-]
+```{r, fig.align='center', echo=FALSE, fig.width=5, fig.height=5}
+# Basic log-likelihood surface plot using base R persp()
+
+# Define a simple log-likelihood function
+log_likelihood <- function(mu1, mu2) {
+  # Parameters for bivariate normal
+  sigma1 <- 1
+  sigma2 <- 1
+  rho <- 0.5
+  x <- 0  # Observed value
+  y <- 0  # Observed value
+  
+  # Calculate log-likelihood
+  term1 <- -log(2 * pi * sigma1 * sigma2 * sqrt(1 - rho^2))
+  term2 <- -1/(2 * (1 - rho^2)) * (
+    ((x - mu1)/sigma1)^2 - 
+    2 * rho * ((x - mu1)/sigma1) * ((y - mu2)/sigma2) + 
+    ((y - mu2)/sigma2)^2
+  )
+  
+  return(term1 + term2)
+}
+
+# Create grid
+mu1_seq <- seq(-3, 3, length.out = 30)
+mu2_seq <- seq(-3, 3, length.out = 30)
+
+# Calculate log-likelihood for each grid point
+ll_matrix <- outer(mu1_seq, mu2_seq, function(x, y) {
+  mapply(log_likelihood, x, y)
+})
+
+# Create the 3D surface plot
+persp(mu1_seq, mu2_seq, ll_matrix,
+      theta = 30, phi = 20,          # Viewing angles
+      col = "yellow",                # Single color for surface
+      xlab = "μ", ylab = "σ", zlab = "log-likelihood",
+      main = "Likelihood Function Surface",
+      ticktype = "detailed",         # Add tick marks
+      shade = 0.5)                   # Add shading
+```
 
 This is a graph of a likelihood function 
 
-The parameters are on the $x$ and $y$ axes and the likelihood is on the $z$ axis
+The parameters $\mu$ and $\sigma$ are on the $x$ and $y$ axes and the likelihood value is on the $z$ axis
 
 
 ---
