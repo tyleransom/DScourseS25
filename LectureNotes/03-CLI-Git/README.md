@@ -1,7 +1,7 @@
 
 ## 1. TeX
 
-TeX is a typesetting system.  It's quite helpful for scientific document as it simplifies the process of writing equations and compiling your bibliography.
+TeX is a typesetting system.  It's quite helpful for scientific documents as it simplifies the process of writing equations and compiling your bibliography.
 
 I recommend using [Overleaf](https://overleaf.com) for anyone who has not used LaTeX before. It's free, on the cloud, and will compile your documents in real time. Plus, it has a great built-in help site.
 
