@@ -26,7 +26,7 @@ In our recommended development workflow, you will write scripts in a text editor
 
 VS Code, Notepad++, Atom, and Vim are all completely free. A trial version of Sublime Text 3 is available for free, but a licensed version is $70 (US dollars). In the following subsections, I provide some of the details of each of these text editors.
 
-### 2.1 Notepad++
+### 2.1 VS Code
 [VS Code](https://code.visualstudio.com/) is probably the most popular text editor in the world right now. It allows for user-written extensions that can dramatically improve workflows. It also has a nice RStudio-esque interface with different sections of the screen for editing code, interacting with a console or terminal, and viewing version control activity.
 
 ### 2.2 Notepad++
